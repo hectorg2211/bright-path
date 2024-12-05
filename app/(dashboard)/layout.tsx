@@ -17,7 +17,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
         <Siderbar />
       </div>
 
-      <main className='md:pl-56 h-full'>{children}</main>
+      <main className='md:pl-56 pt-[80px] h-full'>{children}</main>
     </div>
   )
 }

@@ -4,6 +4,7 @@ import { auth } from '@clerk/nextjs/server'
 import { redirect } from 'next/navigation'
 import IconBadge from '@/components/icon-badge'
 import { LayoutDashboard } from 'lucide-react'
+import TitleForm from './_components/TitleForm'
 
 interface CourseIdPageProps {
   params: {
@@ -46,6 +47,8 @@ const CourseIdPage: React.FC<CourseIdPageProps> = async ({ params }) => {
             <IconBadge icon={LayoutDashboard} />
             <h2 className='text-xl'>Customize your course</h2>
           </div>
+
+          <TitleForm initialData={course} courseId={courseId} />
         </div>
       </div>
     </div>

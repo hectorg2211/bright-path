@@ -5,6 +5,7 @@ import { redirect } from 'next/navigation'
 import IconBadge from '@/components/icon-badge'
 import { LayoutDashboard } from 'lucide-react'
 import TitleForm from './_components/TitleForm'
+import DescriptionForm from './_components/DescriptionForm'
 
 interface CourseIdPageProps {
   params: {
@@ -49,6 +50,8 @@ const CourseIdPage: React.FC<CourseIdPageProps> = async ({ params }) => {
           </div>
 
           <TitleForm initialData={course} courseId={courseId} />
+
+          <DescriptionForm initialData={course as any} courseId={courseId} />
         </div>
       </div>
     </div>
